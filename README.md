@@ -13,7 +13,7 @@ Please use the following citation in any publication using Procrustes library:
 > **"B3DB: A Curated Database of Blood-Brain Barrier Permeability and Chemical Descriptors for a
 Diverse Set of Compounds", F. Meng, et al.**
 
-*To be updated once the publications is out.*
+*To be updated once the publication is out.*
 
 ## Features of *B3DB*
 
