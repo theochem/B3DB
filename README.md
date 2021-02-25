@@ -48,3 +48,6 @@ regression_data = pd.read_csv("B3DB/B3DB_regression.tsv",
 classification_data = pd.read_csv("B3DB/B3DB_classification.tsv",
                                   sep="\t")
 ```
+
+All the materials and data under this repo are under
+[CC-BY-4.0 Licence](https://creativecommons.org/licenses/by/4.0/legalcode).
