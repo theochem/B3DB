@@ -1,7 +1,9 @@
 # About *B3DB*
 
 In this repo, we present a large benchmark dataset, Blood-Brain Barrier Database (B3DB), complied
-from 50 published resources and categorized based on experimental uncertainty. A subset of the
+from 50 published resources (as summaried at
+[raw_data/raw_data_summary.tsv](raw_data/raw_data_summary.tsv)) and categorized based on
+experimental uncertainty. A subset of the
 molecules in B3DB has numerical `logBB` values (1058 compounds), while the whole dataset
 has categorical (BBB+ or BBB-) BBB permeability labels (7807). Some physicochemical properties
 of the molecules are also provided, .
@@ -46,3 +48,6 @@ regression_data = pd.read_csv("B3DB/B3DB_regression.tsv",
 classification_data = pd.read_csv("B3DB/B3DB_classification.tsv",
                                   sep="\t")
 ```
+
+All the materials and data under this repo are under
+[CC-BY-4.0 Licence](https://creativecommons.org/licenses/by/4.0/legalcode).
