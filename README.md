@@ -18,27 +18,31 @@ Diverse Set of Compounds", F. Meng, et al.**
 ## Features of *B3DB*
 
 1. The largest dataset with numerical and categorical values for Blood-Brain Barrier small molecules
-(to the best of our knowledge as of 2021/Feb/25).
+    (to the best of our knowledge as of 2021/Feb/25).
 
 2. Inclusion of sterochemistry information with isomeric SMILES with chiral specifications if
-available. Otherwise, canonical SMILES are used.
+    available. Otherwise, canonical SMILES are used.
 
 3. Characterization of uncertainty of experimental measurements by grouping the collected molecular
-data records.
+    data records.
 
 4. Extended datasets for numerical and categorical data with precomputed physicochemical properties
-using [mordred](https://github.com/mordred-descriptor/mordred).
+    using [mordred](https://github.com/mordred-descriptor/mordred).
 
 ## Usage
 
 There are two types of dataset in [B3DB](B3DB), [regression data](B3DB/B3DB_regression.tsv)
-and [classification data](B3DB/B3DB_classification.tsv) and they can just simply load with *pands*
+and [classification data](B3DB/B3DB_classification.tsv) and they can just simply load with *pandas*
 library. For example
 
 ```python
 import pandas as pd
 
+# load regression data
 regression_data = pd.read_csv("B3DB/B3DB_regression.tsv",
                               sep="\t")
 
+# load classification data
+classification_data = pd.read_csv("B3DB/B3DB_classification.tsv",
+                                  sep="\t")
 ```
