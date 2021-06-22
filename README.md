@@ -6,7 +6,7 @@ from 50 published resources (as summaried at
 experimental uncertainty. A subset of the
 molecules in B3DB has numerical `logBB` values (1058 compounds), while the whole dataset
 has categorical (BBB+ or BBB-) BBB permeability labels (7807). Some physicochemical properties
-of the molecules are also provided, .
+of the molecules are also provided.
 
 ## Citation
 
