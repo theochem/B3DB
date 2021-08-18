@@ -97,7 +97,8 @@ conda install -c rdkit rdkit=2020.09.1.0
 conda install -c conda-forge chembl_structure_pipeline=1.0.0
 pip install -r requirements.txt
 ```
-ALOGPS version 2.1 can be accessed at http://www.vcclab.org/lab/alogps/.
+
+`ALOGPS` version 2.1 can be accessed at http://www.vcclab.org/lab/alogps/.
 
  the materials and data under this repo are under
 [CC-BY-4.0 Licence](https://creativecommons.org/licenses/by/4.0/legalcode).
