@@ -1,0 +1,10 @@
+# packages required
+
+# ChEMBL_Structure_Pipeline==1.0.0
+# RDKit==2020.09.1
+mordred==1.1.1
+numpy==1.19.2
+pandas==1.2.1
+pubchempy==1.0.4
+PyTDC==0.1.5
+SciPy==1.5.2
