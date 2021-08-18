@@ -49,5 +49,54 @@ classification_data = pd.read_csv("B3DB/B3DB_classification.tsv",
                                   sep="\t")
 ```
 
-All the materials and data under this repo are under
+## Working environment setting up
+
+All the calculations were performed in a Python 3.7.9 virtual environment created with Conda in
+CentOS Linux release 7.9.2009 includes Python packages,
+
+- ChEMBL_Structure_Pipeline==1.0.0, https://github.com/chembl/ChEMBL_Structure_Pipeline/
+- mordred==1.1.1, https://github.com/mordred-descriptor/mordred/
+- numpy==1.19.2, https://numpy.org/
+- pandas==1.2.1, https://pandas.pydata.org/
+- pubchempy==1.0.4, https://github.com/mcs07/PubChemPy/
+- PyTDC==0.1.5, https://github.com/mims-harvard/TDC/
+- RDKit==2020.09.1, https://www.rdkit.org/
+- SciPy==1.5.2, https://www.scipy.org/
+
+We will create a virtual environment named *bbb_data* with `Python 3.7.9` first,
+```bash
+conda create bbb_py37 python=3.7.9
+```
+Given that `RDKit`, `ChEMBL_Structure_Pipeline` are not available in PyPI and we will install
+them with `conda`,
+
+```bash
+# activate virtual environment
+conda activate bbb_py37
+
+conda install -c rdkit rdkit=2020.09.1.0
+conda install -c conda-forge chembl_structure_pipeline=1.0.0
+```
+Then we can install the requirements in [requirements.txt](requirements.txt) with
+```bash
+pip install -r requirements.txt
+```
+
+An easier way is to run the follow script with `bash`,
+
+```bash
+#!/bin/bash
+
+# create virtual environment
+conda create bbb_py37 python=3.7.9
+# activate virtual environment
+conda activate bbb_py37
+
+# install required packages
+conda install -c rdkit rdkit=2020.09.1.0
+conda install -c conda-forge chembl_structure_pipeline=1.0.0
+pip install -r requirements.txt
+```
+
+ the materials and data under this repo are under
 [CC-BY-4.0 Licence](https://creativecommons.org/licenses/by/4.0/legalcode).
