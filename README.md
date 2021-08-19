@@ -99,6 +99,9 @@ conda activate bbb_py37
 # install required packages
 conda install -c rdkit rdkit=2020.09.1.0
 conda install -c conda-forge chembl_structure_pipeline=1.0.0
+# https://docs.eyesopen.com/toolkits/python/quickstart-python/linuxosx.html
+conda install -c openeye openeye-toolkits=2020.2.0
+
 pip install -r requirements.txt
 ```
 
