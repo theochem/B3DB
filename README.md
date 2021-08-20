@@ -49,6 +49,10 @@ classification_data = pd.read_csv("B3DB/B3DB_classification.tsv",
                                   sep="\t")
 ```
 
+We also have two examples to show how to use our dataset, 
+[numerical_data_analysis.ipynb](notebooks/numerical_data_analysis.ipynb) and 
+[PCA_projection.ipynb](notebooks/PCA_projection.ipynb).
+
 ## Working environment setting up
 
 All the calculations were performed in a Python 3.7.9 virtual environment created with Conda in
@@ -108,4 +112,4 @@ pip install -r requirements.txt
 `ALOGPS` version 2.1 can be accessed at http://www.vcclab.org/lab/alogps/.
 
 The materials and data under this repo are under
-[CC-BY-4.0 Licence](https://creativecommons.org/licenses/by/4.0/legalcode).
+[CC0 Licence](http://creativecommons.org/publicdomain/zero/1.0/).
