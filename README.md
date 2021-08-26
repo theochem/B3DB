@@ -66,6 +66,8 @@ We also have three examples to show how to use our dataset,
 chemical descriptors for visualization of chemical space of `B3DB`, which can also be accessed
 with *MyBinder* interactively,
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/theochem/B3DB/main?filepath=notebooks%2FPCA_projection_descriptors.ipynb).
+Due to the difficulty of installing `RDKit` in *MyBinder*, only `PCA_projection_descriptors.
+ipynb` is set up in *MyBinder*.
 
 ## Working environment setting up
 
