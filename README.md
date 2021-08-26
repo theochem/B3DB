@@ -63,7 +63,9 @@ We also have three examples to show how to use our dataset,
 [PCA_projection_fingerprint.ipynb](notebooks/PCA_projection_fingerprint.ipynb) and 
 [PCA_projection_descriptors.ipynb](notebooks/PCA_projection_descriptors.ipynb). 
 [PCA_projection_descriptors.ipynb](notebooks/PCA_projection_descriptors.ipynb) used precomputed 
-chemical descriptors for visualization of chemical space of `B3DB`.
+chemical descriptors for visualization of chemical space of `B3DB`, which can also be accessed
+with *MyBinder* interactively,
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/theochem/B3DB/main?filepath=notebooks%2FPCA_projection_descriptors.ipynb).
 
 ## Working environment setting up
 
