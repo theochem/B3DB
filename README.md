@@ -1,11 +1,11 @@
 # About *B3DB*
 
-In this repo, we present a large benchmark dataset, Blood-Brain Barrier Database (B3DB), complied
+In this repo, we present a large benchmark dataset, Blood-Brain Barrier Database (B3DB), compiled
 from 50 published resources (as summarized at
 [raw_data/raw_data_summary.tsv](raw_data/raw_data_summary.tsv)) and categorized based on
-experimental uncertainty. A subset of the
+the consistency between different references/measurements. A subset of the
 molecules in B3DB has numerical `logBB` values (1058 compounds), while the whole dataset
-has categorical (BBB+ or BBB-) BBB permeability labels (7807). Some physicochemical properties
+has categorical (BBB+ or BBB-) BBB permeability labels (7807 compounds). Some physicochemical properties
 of the molecules are also provided.
 
 ## Citation
@@ -20,7 +20,7 @@ Diverse Set of Compounds", F. Meng, et al.**
 ## Features of *B3DB*
 
 1. The largest dataset with numerical and categorical values for Blood-Brain Barrier small molecules
-    (to the best of our knowledge as of 2021/Feb/25).
+    (to the best of our knowledge, as of February 25, 2021).
 
 2. Inclusion of stereochemistry information with isomeric SMILES with chiral specifications if
     available. Otherwise, canonical SMILES are used.
@@ -34,8 +34,7 @@ Diverse Set of Compounds", F. Meng, et al.**
 ## Usage
 
 There are two types of dataset in [B3DB](B3DB), [regression data](B3DB/B3DB_regression.tsv)
-and [classification data](B3DB/B3DB_classification.tsv) and they can just simply load with *pandas*
-library. For example
+and [classification data](B3DB/B3DB_classification.tsv) and they can be loaded simply using *pandas*. For example
 
 ```python
 import pandas as pd
@@ -62,9 +61,9 @@ We also have three examples to show how to use our dataset,
 [numerical_data_analysis.ipynb](notebooks/numerical_data_analysis.ipynb), 
 [PCA_projection_fingerprint.ipynb](notebooks/PCA_projection_fingerprint.ipynb) and 
 [PCA_projection_descriptors.ipynb](notebooks/PCA_projection_descriptors.ipynb). 
-[PCA_projection_descriptors.ipynb](notebooks/PCA_projection_descriptors.ipynb) used precomputed 
-chemical descriptors for visualization of chemical space of `B3DB`, which can also be accessed
-with *MyBinder* interactively,
+[PCA_projection_descriptors.ipynb](notebooks/PCA_projection_descriptors.ipynb) uses precomputed 
+chemical descriptors for visualization of chemical space of `B3DB`, and can be used directly
+using *MyBinder*,
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/theochem/B3DB/main?filepath=notebooks%2FPCA_projection_descriptors.ipynb).
 Due to the difficulty of installing `RDKit` in *MyBinder*, only `PCA_projection_descriptors.
 ipynb` is set up in *MyBinder*.
@@ -72,7 +71,7 @@ ipynb` is set up in *MyBinder*.
 ## Working environment setting up
 
 All the calculations were performed in a Python 3.7.9 virtual environment created with Conda in
-CentOS Linux release 7.9.2009 includes Python packages,
+CentOS Linux release 7.9.2009. The Conda environment includes the following Python packages,
 
 - ChEMBL_Structure_Pipeline==1.0.0, https://github.com/chembl/ChEMBL_Structure_Pipeline/
 - RDKit==2020.09.1, https://www.rdkit.org/
@@ -85,7 +84,7 @@ CentOS Linux release 7.9.2009 includes Python packages,
 - SciPy==1.5.2, https://www.scipy.org/
 - tabula-py==2.2.0, https://pypi.org/project/tabula-py/
 
-We will create a virtual environment named *bbb_data* with `Python 3.7.9` first,
+To creat a virtual environment named *bbb_data* with `Python 3.7.9` to this specification, first,
 ```bash
 conda create bbb_py37 python=3.7.9
 ```
@@ -127,5 +126,5 @@ pip install -r requirements.txt
 
 `ALOGPS` version 2.1 can be accessed at http://www.vcclab.org/lab/alogps/.
 
-The materials and data under this repo are under
+The materials and data under this repo are distributed under the
 [CC0 Licence](http://creativecommons.org/publicdomain/zero/1.0/).
