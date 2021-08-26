@@ -22,7 +22,7 @@ Diverse Set of Compounds", F. Meng, et al.**
 1. The largest dataset with numerical and categorical values for Blood-Brain Barrier small molecules
     (to the best of our knowledge as of 2021/Feb/25).
 
-2. Inclusion of sterochemistry information with isomeric SMILES with chiral specifications if
+2. Inclusion of stereochemistry information with isomeric SMILES with chiral specifications if
     available. Otherwise, canonical SMILES are used.
 
 3. Characterization of uncertainty of experimental measurements by grouping the collected molecular
@@ -53,14 +53,17 @@ regression_data_extended = pd.read_csv("B3DB/B3DB_regression_extended.tsv.gz",
                                        sep="\t", compression="gzip")
 
 # load extended classification dataset
-regression_data_extended = pd.read_csv("B3DB/B3DB_classification_extended.tsv.gz",
-                                       sep="\t", compression="gzip")
+classification_data_extended = pd.read_csv("B3DB/B3DB_classification_extended.tsv.gz",
+                                           sep="\t", compression="gzip")
 
 ```
 
-We also have two examples to show how to use our dataset, 
-[numerical_data_analysis.ipynb](notebooks/numerical_data_analysis.ipynb) and 
-[PCA_projection.ipynb](notebooks/PCA_projection.ipynb).
+We also have three examples to show how to use our dataset, 
+[numerical_data_analysis.ipynb](notebooks/numerical_data_analysis.ipynb), 
+[PCA_projection_fingerprint.ipynb](notebooks/PCA_projection_fingerprint.ipynb) and 
+[PCA_projection_descriptors.ipynb](notebooks/PCA_projection_descriptors.ipynb). 
+[PCA_projection_descriptors.ipynb](notebooks/PCA_projection_descriptors.ipynb) used precomputed 
+chemical descriptors for visualization of chemical space of `B3DB`.
 
 ## Working environment setting up
 
