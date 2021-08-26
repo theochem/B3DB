@@ -1,7 +1,7 @@
 # About *B3DB*
 
 In this repo, we present a large benchmark dataset, Blood-Brain Barrier Database (B3DB), complied
-from 50 published resources (as summaried at
+from 50 published resources (as summarized at
 [raw_data/raw_data_summary.tsv](raw_data/raw_data_summary.tsv)) and categorized based on
 experimental uncertainty. A subset of the
 molecules in B3DB has numerical `logBB` values (1058 compounds), while the whole dataset
@@ -40,13 +40,22 @@ library. For example
 ```python
 import pandas as pd
 
-# load regression data
+# load regression dataset
 regression_data = pd.read_csv("B3DB/B3DB_regression.tsv",
                               sep="\t")
 
-# load classification data
+# load classification dataset
 classification_data = pd.read_csv("B3DB/B3DB_classification.tsv",
                                   sep="\t")
+
+# load extended regression dataset
+regression_data_extended = pd.read_csv("B3DB/B3DB_regression_extended.tsv.gz", 
+                                       sep="\t", compression="gzip")
+
+# load extended classification dataset
+regression_data_extended = pd.read_csv("B3DB/B3DB_classification_extended.tsv.gz",
+                                       sep="\t", compression="gzip")
+
 ```
 
 We also have two examples to show how to use our dataset, 
@@ -60,7 +69,7 @@ CentOS Linux release 7.9.2009 includes Python packages,
 
 - ChEMBL_Structure_Pipeline==1.0.0, https://github.com/chembl/ChEMBL_Structure_Pipeline/
 - RDKit==2020.09.1, https://www.rdkit.org/
-- openeye-toolkit===2020.2.0, https://docs.eyesopen.com/toolkits/python/index.html/
+- openeye-toolkit==2020.2.0, https://docs.eyesopen.com/toolkits/python/index.html/
 - mordred==1.1.2, https://github.com/mordred-descriptor/mordred/ (required networkx==2.3.0)
 - numpy==1.19.2, https://numpy.org/
 - pandas==1.2.1, https://pandas.pydata.org/
