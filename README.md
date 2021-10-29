@@ -10,12 +10,21 @@ of the molecules are also provided.
 
 ## Citation
 
-Please use the following citation in any publication using Procrustes library:
+Please use the following citation in any publication using our *B3DB* dataset:
 
-> **"B3DB: A Curated Database of Blood-Brain Barrier Permeability and Chemical Descriptors for a
-Diverse Set of Compounds", F. Meng, et al.**
-
-*To be updated once the publication is out.*
+```md
+@article{Meng_A_curated_diverse_2021,
+author = {Meng, Fanwang and Xi, Yang and Huang, Jinfeng and Ayers, Paul W.},
+doi = {10.1038/s41597-021-01069-5},
+journal = {Scientific Data},
+number = {289},
+title = {A curated diverse molecular database of blood-brain barrier permeability with chemical descriptors},
+volume = {8},
+year = {2021},
+url = {https://www.nature.com/articles/s41597-021-01069-5},
+publisher = {Springer Nature}
+}
+```
 
 ## Features of *B3DB*
 
