@@ -13,11 +13,13 @@ preferred-citation:
       orcid: "https://orcid.org/0000-0002-6342-8536"
     - family-names: Ayers
       given-names: "Paul W."
+  journal: "Scientific Data"
   title: "A curated diverse molecular database of blood-brain barrier permeability with chemical descriptors"
   type: article
   doi: "10.1038/s41597-021-01069-5"
+  isbn: 2052-4463
   year: 2021
   volume: 8
-  issuse: 1
+  issue: 1
   pages: 289
   date-released: "2021-10-29"
