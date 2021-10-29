@@ -1,0 +1,31 @@
+# YAML 1.2
+---
+authors:
+  -
+    affiliation: "Department of Chemistry and Chemical Biology, McMaster University"
+    family-names: Meng
+    given-names: Fanwang
+    orcid: "https://orcid.org/0000-0003-2886-7012"
+  -
+    affiliation: "Department of Chemistry and Chemical Biology, McMaster University"
+    family-names: Xi
+    given-names: Yang
+  -
+    affiliation: "Department of Chemistry and Chemical Biology, McMaster University"
+    family-names: Huang
+    given-names: Jinfeng
+  -
+    affiliation: "Department of Chemistry and Chemical Biology, McMaster University"
+    family-names: Ayers
+    given-names: "Paul W."
+  -
+    family-names:
+    given-names:
+cff-version: "1.2.0"
+date-released: 2021-10-29
+doi: "10.1038/s41597-021-01069-5"
+license: "CC-BY-4.0"
+message: "If you use this software, please cite it using this metadata. Thank you."
+repository-code: "https://github.com/theochem/B3DB"
+title: "A curated diverse molecular database of blood-brain barrier permeability with chemical descriptors"
+...
