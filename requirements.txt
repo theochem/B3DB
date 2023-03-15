@@ -6,7 +6,7 @@ mordred==1.1.2
 # openeye-toolkit=2020.2.0
 # networkx 2.3.0 is required by mordred
 networkx==2.3.0
-numpy==1.19.2
+numpy>=1.22
 pandas==1.2.1
 pubchempy==1.0.4
 PyTDC==0.1.5
