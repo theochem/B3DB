@@ -3,7 +3,7 @@
 In this repo, we present a large benchmark dataset, [Blood-Brain Barrier Database (B3DB)](https://www.nature.com/articles/s41597-021-01069-5), compiled
 from 50 published resources (as summarized at
 [raw_data/raw_data_summary.tsv](raw_data/raw_data_summary.tsv)) and categorized based on
-the consistency between different references/measurements. This dataset was [published in Scientific Data](https://www.nature.com/articles/s41597-021-01069-5) and this repository is occassionally uploaded with new data. Scientists who would like to contribute data should contact the database's maintainers (e.g., by creating a new Issue in this database).
+the consistency between different experimental references/measurements. This dataset was [published in Scientific Data](https://www.nature.com/articles/s41597-021-01069-5) and this repository is occasionally uploaded with new experimental data. Scientists who would like to contribute data should contact the database's maintainers (e.g., by creating a new Issue in this database).
 
 A subset of the
 molecules in B3DB has numerical `logBB` values (1058 compounds), while the whole dataset
