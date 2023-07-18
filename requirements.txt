@@ -10,5 +10,5 @@ numpy>=1.22
 pandas==1.2.1
 pubchempy==1.0.4
 PyTDC==0.1.5
-SciPy==1.5.2
+SciPy==1.10.0
 tabula-py==2.2.0
