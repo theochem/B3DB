@@ -92,7 +92,7 @@ CentOS Linux release 7.9.2009. The Conda environment includes the following Pyth
 - pandas==1.2.1, https://pandas.pydata.org/
 - pubchempy==1.0.4, https://github.com/mcs07/PubChemPy/
 - PyTDC==0.1.5, https://github.com/mims-harvard/TDC/
-- SciPy==1.5.2, https://www.scipy.org/
+- SciPy==1.10.0, https://www.scipy.org/
 - tabula-py==2.2.0, https://pypi.org/project/tabula-py/
 
 To creat a virtual environment named *bbb_data* with `Python 3.7.9` to this specification, first,
@@ -103,7 +103,7 @@ Given that `RDKit`, `ChEMBL_Structure_Pipeline` are not available in PyPI and we
 them with `conda`,
 
 ```bash
-# activate virtual environment
+# activate a virtual environment
 conda activate bbb_py37
 
 conda install -c rdkit rdkit=2020.09.1.0
