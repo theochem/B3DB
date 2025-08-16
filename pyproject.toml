@@ -106,6 +106,7 @@ B3DB = ["*.csv", "*.tsv", "*.tsv.gz"]
 exclude = [
     "*/*/tests",
     "tests_*",
+    "data_curation",
     "cleaning",
     "notebooks",
     "grouping",
