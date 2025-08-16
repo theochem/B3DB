@@ -119,10 +119,6 @@ exclude = [
 [tool.setuptools.package-data]
 B3DB = ["*.csv", "*.tsv", "*.tsv.gz"]
 
-
-
-
-
 [tool.setuptools.exclude-package-data]
 # exclude all files in data_curation folder from all packages
 "*" = [

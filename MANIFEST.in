@@ -1,4 +1,4 @@
-# Only include essential files
+# Include essential files
 include README.md
 include LICENSE
 include CITATION.cff
@@ -8,5 +8,27 @@ include pyproject.toml
 # Include B3DB package data
 recursive-include B3DB *.tsv *.tsv.gz *.csv
 
-# Exclude everything else
-global-exclude *
+# Exclude data_curation folder and all its contents
+global-exclude data_curation/
+global-exclude data_curation/*
+global-exclude data_curation/**/*
+
+# Exclude notebooks folder and all its contents
+global-exclude notebooks/
+global-exclude notebooks/*
+global-exclude notebooks/**/*
+
+# Exclude common build artifacts and cache files
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude *.egg-info
+global-exclude .git*
+global-exclude .github
+global-exclude build
+global-exclude dist
+global-exclude .tox
+global-exclude .pytest_cache
+global-exclude .coverage
+global-exclude htmlcov
+global-exclude .mypy_cache
+global-exclude .ruff_cache
