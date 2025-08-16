@@ -1,1 +1,25 @@
-prune data_curation
+# Explicitly include only what we want
+include README.md
+include LICENSE
+include CITATION.cff
+include requirements.txt
+include pyproject.toml
+
+# Include B3DB package data
+recursive-include B3DB *.tsv *.tsv.gz *.csv
+
+# Exclude everything else
+global-exclude *
+exclude *.pyc
+exclude __pycache__
+exclude *.egg-info
+exclude .git*
+exclude .github
+exclude build
+exclude dist
+exclude .tox
+exclude .pytest_cache
+exclude .coverage
+exclude htmlcov
+exclude .mypy_cache
+exclude .ruff_cache
