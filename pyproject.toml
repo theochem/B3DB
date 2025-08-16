@@ -95,15 +95,11 @@ include-package-data = true
 # This just means it's safe to zip up the bdist
 zip-safe = true
 
-# Non-code data that should be included in the package source code
-# https://setuptools.pypa.io/en/latest/userguide/datafiles.html
-[tool.setuptools.package-data]
-B3DB = ["*.csv", "*.tsv", "*.tsv.gz"]
-
 # Python modules and packages that are included in the
 # distribution package (and therefore become importable)
 [tool.setuptools.packages.find]
-where = ["B3DB"]
+where = ["."]
+include = ["B3DB"]
 exclude = [
     "*/*/tests",
     "tests_*",
@@ -115,6 +111,21 @@ exclude = [
     "preprocessing",
     "raw_data",
 ]
+
+# Non-code data that should be included in the package source code
+# https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+[tool.setuptools.package-data]
+B3DB = ["*.csv", "*.tsv", "*.tsv.gz"]
+
+[tool.setuptools.exclude-package-data]
+# exclude all files in data_curation folder from all packages
+"*" = [
+    "data_curation/*",
+    "data_curation/**/*",
+    "notebooks/*",
+    "notebooks/**/*",
+]
+
 
 [tool.black]
 line-length = 100
