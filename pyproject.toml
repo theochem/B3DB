@@ -37,7 +37,7 @@ keywords = [
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
-    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
     "Natural Language :: English",
     "Operating System :: MacOS",
     "Operating System :: Microsoft :: Windows",
@@ -108,6 +108,7 @@ exclude = [
     "*/*/tests",
     "tests_*",
     "data_curation",
+    "data_curation/*",
     "cleaning",
     "notebooks",
     "grouping",
