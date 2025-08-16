@@ -15,7 +15,7 @@
 [project]
 # https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
 name = "qc-B3DB"
-description = "Subset selection with maximum diversity."
+description = "A rich molecule dataset for Blood-Brain Barrier (BBB) permeability."
 readme = {file = 'README.md', content-type='text/markdown'}
 requires-python = ">=3.9"
 # "LICENSE" is name of the license file, which must be in root of project folder
