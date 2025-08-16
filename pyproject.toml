@@ -110,12 +110,18 @@ exclude = [
     "grouping",
     "preprocessing",
     "raw_data",
+    "data_curation/**/*",
+    "notebooks/**/*",
 ]
 
 # Non-code data that should be included in the package source code
 # https://setuptools.pypa.io/en/latest/userguide/datafiles.html
 [tool.setuptools.package-data]
 B3DB = ["*.csv", "*.tsv", "*.tsv.gz"]
+
+
+
+
 
 [tool.setuptools.exclude-package-data]
 # exclude all files in data_curation folder from all packages
@@ -124,7 +130,22 @@ B3DB = ["*.csv", "*.tsv", "*.tsv.gz"]
     "data_curation/**/*",
     "notebooks/*",
     "notebooks/**/*",
+    "*.pyc",
+    "__pycache__/*",
+    "*.egg-info/*",
+    ".git*",
+    ".github/*",
+    "build/*",
+    "dist/*",
+    ".tox/*",
+    ".pytest_cache/*",
+    ".coverage",
+    "htmlcov/*",
+    ".mypy_cache/*",
+    ".ruff_cache/*",
 ]
+
+
 
 
 [tool.black]
