@@ -19,7 +19,7 @@ description = "A rich molecule dataset for Blood-Brain Barrier (BBB) permeabilit
 readme = {file = 'README.md', content-type='text/markdown'}
 requires-python = ">=3.9"
 # "LICENSE" is name of the license file, which must be in root of project folder
-license = {file = "LICENSE"}
+license = "CC0-1.0"
 authors = [
     {name = "QC-Devs Community", email = "qcdevs@gmail.com"},
 ]
@@ -37,7 +37,6 @@ keywords = [
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
-    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
     "Natural Language :: English",
     "Operating System :: MacOS",
     "Operating System :: Microsoft :: Windows",
@@ -51,6 +50,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Scientific/Engineering",
     "Topic :: Scientific/Engineering :: Chemistry",
 ]
@@ -83,7 +83,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
-optional-dependencies = {dev = { file = ["requirements_dev.txt"] }}
+# optional-dependencies = {dev = { file = ["requirements_dev.txt"] }}
 
 [tool.setuptools_scm]
 # can be empty if no extra settings are needed, presence enables setuptools-scm
@@ -269,10 +269,10 @@ markers = [
 # Configuration for coverage.py
 [tool.coverage.run]
 # files or directories to exclude from coverage calculations
-omit = [
-    'B3DB/measures/tests/*',
-    'B3DB/methods/tests/*',
-]
+# omit = [
+#     'B3DB/measures/tests/*',
+#     'B3DB/methods/tests/*',
+# ]
 
 
 # Configuration for vulture
