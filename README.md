@@ -139,18 +139,3 @@ pip install -r requirements.txt
 
 The materials and data under this repo are distributed under the
 [CC0 Licence](http://creativecommons.org/publicdomain/zero/1.0/).
-
-## Update: New External Dataset Available
-
-We’ve expanded the B3DB dataset by adding a new file: `B3DB_classification_external.tsv`. This file introduces additional compounds (171 BBB+ and 4 BBB-) that were not present in the original B3DB dataset. These compounds were carefully selected and incorporated to further enrich B3DB.
-
-### Usage
-
-To load and work with the new classification data in Python, you can use the following code snippet:
-
-```python
-import pandas as pd
-
-# Load the new external classification dataset
-external_classification_data = pd.read_csv("B3DB/B3DB_classification_external.tsv", sep="\t")
-```
