@@ -1,0 +1,296 @@
+# The B3DB provides a rich molecule database for
+# Blood-Brain Barrier (BBB) permeability.
+#
+# Copyright (C) 2021-2025 The QC-Devs Community
+# This file is part of B3DB.
+#
+# B3DB is dedicated to the public domain under the terms of CC0 1.0 Universal.
+#
+# A full copy of the CC0 1.0 Universal license can be found at:
+# https://creativecommons.org/publicdomain/zero/1.0/legalcode
+#
+# --
+
+
+[project]
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+name = "qc-B3DB"
+description = "Subset selection with maximum diversity."
+readme = {file = 'README.md', content-type='text/markdown'}
+requires-python = ">=3.9"
+# "LICENSE" is name of the license file, which must be in root of project folder
+license = {file = "LICENSE"}
+authors = [
+    {name = "QC-Devs Community", email = "qcdevs@gmail.com"},
+]
+keywords = [
+    "Blood-Brain Barrier",
+    "BBB",
+    "drug discovery",
+    "BBB permeability",
+    "CNS drug delivery",
+    "molecule database",
+]
+
+# https://pypi.org/classifiers/
+# Add PyPI classifiers here
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Natural Language :: English",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: Unix",
+    "Operating System :: POSIX",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+
+dynamic = [
+    "dependencies",
+    "optional-dependencies",
+    "version",
+    ]
+
+[project.scripts]
+# Command line interface entrypoint scripts
+
+[project.urls]
+# Use PyPI-standard names here
+# Homepage
+# Documentation
+# Changelog
+# Issue Tracker
+# Source
+# Discord server
+homepage = "https://github.com/theochem/B3DB"
+documentation = "https://github.com/theochem/B3DB"
+repository = "https://github.com/theochem/B3DB"
+
+[build-system]
+# Minimum requirements for the build system to execute.
+requires = ["setuptools>=64", "setuptools-scm>=8", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["requirements_dev.txt"] }}
+
+[tool.setuptools_scm]
+# can be empty if no extra settings are needed, presence enables setuptools-scm
+
+[tool.setuptools]
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+platforms = ["Linux", "Windows", "MacOS"]
+include-package-data = true
+# This just means it's safe to zip up the bdist
+zip-safe = true
+
+# Non-code data that should be included in the package source code
+# https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+[tool.setuptools.package-data]
+B3DB = ["*.csv", "*.tsv", "*.tsv.gz"]
+
+# Python modules and packages that are included in the
+# distribution package (and therefore become importable)
+[tool.setuptools.packages.find]
+exclude = [
+    "*/*/tests",
+    "tests_*",
+    "cleaning",
+    "notebooks",
+    "grouping",
+    "preprocessing",
+    "raw_data",
+    ]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+known_first_party = ["B3DB"]
+# If you need to exclude files from having their imports sorted
+#extend_skip_glob  = [
+#    "B3DB/somefile.py",
+#    "B3DB/somedir/*",
+#]
+
+
+# https://beta.ruff.rs/docs
+[tool.ruff]
+line-length = 100
+show-source = true
+
+# Rules: https://beta.ruff.rs/docs/rules
+# If you violate a rule, lookup the rule on the Rules page in ruff docs.
+# Many rules have links you can click with a explanation of the rule and how to fix it.
+# If there isn't a link, go to the project the rule was source from (e.g. flake8-bugbear)
+# and review it's docs for the corresponding rule.
+# If you're still confused, ask a fellow developer for assistance.
+# You can also run "ruff rule <rule>" to explain a rule on the command line, without a browser or internet access.
+select = [
+    "E",    # pycodestyle
+    "F",    # Pyflakes
+    "W",    # Warning
+    "B",    # flake8-bugbear
+    "A",    # flake8-builtins
+    "C4",   # flake8-comprehensions
+    "T10",  # flake8-debugger
+    "EXE",  # flake8-executable,
+    "ISC",  # flake8-implicit-str-concat
+    "G",    # flake8-logging-format
+    "PIE",  # flake8-pie
+    "T20",  # flake8-print
+    "PT",   # flake8-pytest-style
+    "RSE",  # flake8-raise
+    "RET",  # flake8-return
+    "TID",  # flake8-tidy-imports
+    "ARG",  # flake8-unused-arguments
+    "PGH",  # pygrep-hooks
+    "PLC",  # Pylint Convention
+    "PLE",  # Pylint Errors
+    "PLW",  # Pylint Warnings
+    "RUF",  # Ruff-specific rules
+
+    # ** Things to potentially enable in the future **
+    # DTZ requires all usage of datetime module to have timezone-aware
+    # objects (so have a tz argument or be explicitly UTC).
+    # "DTZ",  # flake8-datetimez
+    # "PTH",  # flake8-use-pathlib
+    # "SIM",  # flake8-simplify
+]
+
+# Files to exclude from linting
+extend-exclude = [
+    "*.pyc",
+    "__pycache__",
+    "*.egg-info",
+    ".eggs",
+    # check point files of jupyter notebooks
+    "*.ipynb_checkpoints",
+    ".tox",
+    ".git",
+    "build",
+    "dist",
+    "docs",
+    "examples",
+    "htmlcov",
+    "notebooks",
+    ".cache",
+    "_version.py",
+]
+
+# Linting error codes to ignore
+ignore = [
+    "F403",    # unable to detect undefined names from star imports
+    "F405",    # undefined locals from star imports
+    "W605",    # invalid escape sequence
+    "A003",    # shadowing python builtins
+    "RET505",  # unnecessary 'else' after 'return' statement
+    "RET504",  # Unnecessary variable assignment before return statement
+    "RET507",  # Unnecessary {branch} after continue statement
+    "PT011",   # pytest-raises-too-broad
+    "PT012",   # pytest.raises() block should contain a single simple statement
+    "PLW0603", # Using the global statement to update is discouraged
+    "PLW2901", # for loop variable overwritten by assignment target
+    "G004",    # Logging statement uses f-string
+    "PIE790",  # no-unnecessary-pass
+    "PIE810",  # multiple-starts-ends-with
+    "PGH003",  # Use specific rule codes when ignoring type issues
+    "PLC1901", # compare-to-empty-string
+]
+
+# Linting error codes to ignore on a per-file basis
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401", "E501"]
+"B3DB/somefile.py" = ["E402", "E501"]
+"B3DB/somedir/*" = ["E501"]
+
+
+# Configuration for mypy
+# https://mypy.readthedocs.io/en/stable/config_file.html#using-a-pyproject-toml-file
+[tool.mypy]
+python_version = "3.9"
+follow_imports = "skip"
+ignore_missing_imports = true
+files = "B3DB"  # directory mypy should analyze
+# Directories to exclude from mypy's analysis
+exclude = [
+    "book",
+]
+
+
+# Configuration for pytest
+# https://docs.pytest.org/en/latest/reference/customize.html#pyproject-toml
+[tool.pytest.ini_options]
+addopts = [
+    # Allow test files to have the same name in different directories.
+    "--import-mode=importlib",
+    "--cache-clear",
+    "--showlocals",
+    "-v",
+    "-r a",
+    "--cov-report=term-missing",
+    "--cov=B3DB",
+]
+# directory containing the tests
+testpaths = [
+    "B3DB/measures/tests",
+    "B3DB/methods/tests",
+]
+norecursedirs = [
+    ".vscode",
+    "__pycache__",
+    "build",
+]
+# Warnings that should be ignored
+filterwarnings = [
+    "ignore::DeprecationWarning"
+]
+# custom markers that can be used using pytest.mark
+markers = [
+    "slow: lower-importance tests that take an excessive amount of time",
+]
+
+
+# Configuration for coverage.py
+[tool.coverage.run]
+# files or directories to exclude from coverage calculations
+omit = [
+    'B3DB/measures/tests/*',
+    'B3DB/methods/tests/*',
+]
+
+
+# Configuration for vulture
+[tool.vulture]
+# Files or directories to exclude from vulture
+# The syntax is a little funky
+exclude = [
+    "somedir",
+    "*somefile.py",
+]
+
+# configuration for bandit
+[tool.bandit]
+exclude_dirs = [
+    "B3DB/measures/tests",
+    "B3DB/methods/tests",
+]
+skips = [
+    "B101", # Ignore assert statements
+    "B311", # Ignore pseudo-random generators
+    "B404", # Ignore subprocess import
+    "B603", # Ignore subprocess call
+    "B607", # Ignore subprocess call
+]

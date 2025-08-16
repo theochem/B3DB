@@ -8,7 +8,7 @@ the consistency between different experimental references/measurements. This dat
 A subset of the
 molecules in B3DB has numerical `logBB` values (1058 compounds), while the whole dataset
 has categorical (BBB+ or BBB-) BBB permeability labels (7807 compounds). Some physicochemical properties
-of the molecules are also provided. 
+of the molecules are also provided.
 
 ## Citation
 
@@ -59,7 +59,7 @@ classification_data = pd.read_csv("B3DB/B3DB_classification.tsv",
                                   sep="\t")
 
 # load extended regression dataset
-regression_data_extended = pd.read_csv("B3DB/B3DB_regression_extended.tsv.gz", 
+regression_data_extended = pd.read_csv("B3DB/B3DB_regression_extended.tsv.gz",
                                        sep="\t", compression="gzip")
 
 # load extended classification dataset
@@ -68,11 +68,11 @@ classification_data_extended = pd.read_csv("B3DB/B3DB_classification_extended.ts
 
 ```
 
-We also have three examples to show how to use our dataset, 
-[numerical_data_analysis.ipynb](notebooks/numerical_data_analysis.ipynb), 
-[PCA_projection_fingerprint.ipynb](notebooks/PCA_projection_fingerprint.ipynb) and 
-[PCA_projection_descriptors.ipynb](notebooks/PCA_projection_descriptors.ipynb). 
-[PCA_projection_descriptors.ipynb](notebooks/PCA_projection_descriptors.ipynb) uses precomputed 
+We also have three examples to show how to use our dataset,
+[numerical_data_analysis.ipynb](notebooks/numerical_data_analysis.ipynb),
+[PCA_projection_fingerprint.ipynb](notebooks/PCA_projection_fingerprint.ipynb) and
+[PCA_projection_descriptors.ipynb](notebooks/PCA_projection_descriptors.ipynb).
+[PCA_projection_descriptors.ipynb](notebooks/PCA_projection_descriptors.ipynb) uses precomputed
 chemical descriptors for visualization of chemical space of `B3DB`, and can be used directly
 using *MyBinder*,
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/theochem/B3DB/main?filepath=notebooks%2FPCA_projection_descriptors.ipynb).
