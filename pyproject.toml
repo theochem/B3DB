@@ -103,7 +103,7 @@ B3DB = ["*.csv", "*.tsv", "*.tsv.gz"]
 # Python modules and packages that are included in the
 # distribution package (and therefore become importable)
 [tool.setuptools.packages.find]
-include = ["B3DB"]
+where = ["B3DB"]
 exclude = [
     "*/*/tests",
     "tests_*",
@@ -114,7 +114,7 @@ exclude = [
     "grouping",
     "preprocessing",
     "raw_data",
-    ]
+]
 
 [tool.black]
 line-length = 100
