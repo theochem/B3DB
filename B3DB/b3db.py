@@ -38,14 +38,13 @@ def load_b3db_dataset():
     classification_external_data = pd.read_csv(
         data_dir / "B3DB_classification_external.tsv", sep="\t"
     )
-    # TODO: add classification_external_extended_data
 
     return {
         "B3DB_regression": regression_data,
         "B3DB_classification": classification_data,
         "B3DB_regression_extended": regression_data_extended,
         "B3DB_classification_extended": classification_data_extended,
-        # "B3DB_classification_external": classification_external_data,
+        "B3DB_classification_external": classification_external_data,
     }
 
 
