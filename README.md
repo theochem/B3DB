@@ -7,12 +7,12 @@ the consistency between different experimental references/measurements. This dat
 
 A subset of the
 molecules in B3DB has numerical `logBB` values (1058 compounds), while the whole dataset
-has categorical (BBB+ or BBB-) BBB permeability labels (7807 compounds). Some physicochemical properties
+has categorical (BBB+ or BBB-) BBB permeability labels (7807 compounds prior to v1.0.0 and 7982 compounds after). Some physicochemical properties
 of the molecules are also provided.
 
 ## Citation
 
-Please use the following citation in any publication using our *B3DB* dataset:
+Please use the following citations in any publication using our *B3DB* dataset:
 
 ```md
 @article{Meng_A_curated_diverse_2021,
@@ -25,6 +25,18 @@ volume = {8},
 year = {2021},
 url = {https://www.nature.com/articles/s41597-021-01069-5},
 publisher = {Springer Nature}
+}
+
+@article{Meng_B3clf_2025,
+author = {Meng, Fanwang and Chen, Jitian and Collins-Ramirez, Juan Samuel and Ayers, Paul W.},
+doi = {xxx},
+journal = {xxx},
+number = {xxx},
+title = {B3clf: A Resampling-Integrated Machine Learning Framework to Predict Blood-Brain Barrier Permeability},
+volume = {x},
+year = {xxx},
+url = {xxx},
+publisher = {xxx}
 }
 ```
 
@@ -63,6 +75,17 @@ from B3DB import B3DB_DATA_DICT
 # 'B3DB_regression_extended'
 # 'B3DB_classification'
 # 'B3DB_classification_extended'
+# "B3DB_classification_external"
+df_b3db_reg = B3DB_DATA_DICT["B3DB_regression"]
+df_b3db_reg.head()
+#    NO.                                      compound_name  ... group comments
+# 0    1                                         moxalactam  ...     A      NaN
+# 1    2                                      schembl614298  ...     A      NaN
+# 2    3                             morphine-6-glucuronide  ...     A      NaN
+# 3    4  2-[4-(5-bromo-3-methylpyridin-2-yl)butylamino]...  ...     A      NaN
+# 4    5                                                NaN  ...     A      NaN
+
+# [5 rows x 10 columns]
 
 ```
 
@@ -111,3 +134,9 @@ Detailed procedures for data curation can be found in [data curation section](da
 
 The materials and data under this repo are distributed under the
 [CC0 Licence](http://creativecommons.org/publicdomain/zero/1.0/).
+
+## ChangeLog
+
+- 2025Aug16, the B3DB dataset is avaliable via PyPI.
+- 2025Aug16, we have added a new set of 171 BBB+ and 4 BBB- compounds to the dataset since
+  version 1.1.0.
