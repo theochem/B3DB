@@ -29,14 +29,14 @@ publisher = {Springer Nature}
 
 @article{Meng_B3clf_2025,
 author = {Meng, Fanwang and Chen, Jitian and Collins-Ramirez, Juan Samuel and Ayers, Paul W.},
-doi = {xxx},
-journal = {xxx},
-number = {xxx},
+doi = {doi:10.26434/chemrxiv-2025-xschc},
+journal = {ChemRxiv},
+number = {to be updated pending peer-reviewed publication},
 title = {B3clf: A Resampling-Integrated Machine Learning Framework to Predict Blood-Brain Barrier Permeability},
-volume = {x},
-year = {xxx},
-url = {xxx},
-publisher = {xxx}
+volume = {to be updated pending peer-reviewed publication},
+year = {to be updated pending peer-reviewed publication},
+url = {to be updated pending peer-reviewed publication},
+publisher = {to be updated pending peer-reviewed publication}
 }
 ```
 
